@@ -10,6 +10,7 @@ router.get("/", userController.getUsers);
 router.get("/:userId", userController.getUserById);
 router.delete("/", userController.deleteUser);
 
+// Login route
 router.post("/login", async (req, res) => {
   try {
     let { username, password } = req.body;
@@ -49,19 +50,22 @@ router.post("/login", async (req, res) => {
 
     res.json(obj);
   } catch (error) {
+    console.error("Login error:", error); // Log the error for debugging
     res.status(500).json({ message: "Internal server error" });
   }
 });
 
+// Logout route with authentication
 router.post(
   "/logout",
-  passport.authenticate("bearer", { session: false }),
+  passport.authenticate("bearer", { session: false }), // Ensure authentication
   async (req, res) => {
     try {
       const userId = req.user.id;
       await userController.logoutUser(userId);
       res.json({ message: "Logout successful" });
     } catch (error) {
+      console.error("Logout error:", error); // Log the error for debugging
       res.status(500).json({ message: "Internal server error" });
     }
   }
