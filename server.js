@@ -71,6 +71,6 @@ exports.handler = (event, context) => {
 // Optional: For local testing
 if (process.env.NODE_ENV !== 'production') {
   app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server  running on http://localhost:${port}`);
   });
 }
