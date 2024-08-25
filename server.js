@@ -53,11 +53,11 @@ app.use("/candidate-reference", candidateReferenceRouter);
 app.use("/candidate-verification", candidateVerificationRouter);
 app.use("/client", clientRouter);
 app.use("/feature", featureRouter);
-app.use("/internal-tea", internalTeamRouter);  // Ensure this path is correct
+app.use("/internal-team", internalTeamRouter);
 app.use("/location", locationRouter);
 app.use("/workingExp", WorkingRouter);
 app.use("/fathers-document", FatherRouter);
-app.use("/internal-team", TeamregRouter);
+app.use("/internal-team-registration", TeamregRouter);
 
 // Create AWS Serverless Express server
 const server = awsServerlessExpress.createServer(app);
@@ -71,6 +71,6 @@ exports.handler = (event, context) => {
 // Optional: For local testing
 if (process.env.NODE_ENV !== 'production') {
   app.listen(port, () => {
-    console.log(`Server  running on http://localhost:${port}`);
+    console.log(`Server running on http://localhost:${port}`);
   });
 }
