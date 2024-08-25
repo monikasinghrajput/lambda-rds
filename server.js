@@ -6,7 +6,6 @@ const passport = require("./config/auth");
 const awsServerlessExpress = require('aws-serverless-express');
 const path = require('path');
 
-// Import route modules
 const userRouter = require("./api/user/user-route");
 const candidateRouter = require("./api/candidate/candidate-route");
 const candidateAddressRouter = require("./api/candidate-address/candidate-address-route");
@@ -26,7 +25,11 @@ const TeamregRouter = require("./api/TeamRegistration/teamRoutes");
 const app = express();
 const port = process.env.PORT || 8080;
 
-app.use(cors());
+app.use(cors({
+  origin: '*', // Adjust as necessary
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
@@ -59,6 +62,15 @@ app.use("/workingExp", WorkingRouter);
 app.use("/fathers-document", FatherRouter);
 app.use("/internal-team-registration", TeamregRouter);
 
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error("Error:", err);
+  res.status(err.status || 500).send({
+    message: err.message || "Internal Server Error",
+    error: process.env.NODE_ENV === 'development' ? err : {}
+  });
+});
+
 // Create AWS Serverless Express server
 const server = awsServerlessExpress.createServer(app);
 
@@ -72,5 +84,16 @@ exports.handler = (event, context) => {
 if (process.env.NODE_ENV !== 'production') {
   app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
+  });
+}
+
+// Graceful shutdown for local testing
+if (process.env.NODE_ENV !== 'production') {
+  process.on('SIGINT', () => {
+    console.log('SIGINT signal received: closing HTTP server');
+    server.close(() => {
+      console.log('HTTP server closed');
+      process.exit(0);
+    });
   });
 }
