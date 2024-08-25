@@ -1,0 +1,68 @@
+2024-06-15T09:59:19.323Z [localhost] error: Incorrect integer value: '' for column 'id' at row 1
+2024-06-21T02:51:39.229Z [localhost] error: WHERE parameter "client_id" has invalid "undefined" value
+2024-06-21T03:21:44.813Z [localhost] error: Unknown column 'CandidteId' in 'field list'
+2024-06-22T06:43:28.044Z [localhost] error: Incorrect integer value: 'Jaipur' for column 'city_id' at row 1
+2024-06-22T06:43:44.099Z [localhost] error: Incorrect integer value: 'Jaipur' for column 'city_id' at row 1
+2024-06-22T12:13:11.313Z [localhost] error: Incorrect integer value: 'Jaipur' for column 'city_id' at row 1
+2024-06-22T12:16:17.535Z [localhost] error: Validation error
+2024-06-22T12:16:19.835Z [localhost] error: Validation error
+2024-06-22T12:16:34.469Z [localhost] error: Validation error
+2024-06-22T12:17:35.540Z [localhost] error: Validation error
+2024-06-22T12:18:54.332Z [localhost] error: Incorrect integer value: 'Jaipur' for column 'city_id' at row 1
+2024-06-22T12:20:02.766Z [localhost] error: Incorrect integer value: 'Jaipur' for column 'city_id' at row 1
+2024-06-25T09:39:46.434Z [localhost] error: string violation: process_list cannot be an array or an object
+2024-07-13T07:18:50.080Z [localhost] error: WHERE parameter "id" has invalid "undefined" value
+2024-07-13T13:00:56.811Z [localhost] error: Cannot add or update a child row: a foreign key constraint fails (`bgverification`.`candidate_references`, CONSTRAINT `candidate_references_ibfk_1` FOREIGN KEY (`candidate_id`) REFERENCES `candidate` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+2024-07-13T13:01:21.489Z [localhost] error: Cannot add or update a child row: a foreign key constraint fails (`bgverification`.`candidate_references`, CONSTRAINT `candidate_references_ibfk_1` FOREIGN KEY (`candidate_id`) REFERENCES `candidate` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+2024-07-13T13:07:27.616Z [localhost] error: Cannot add or update a child row: a foreign key constraint fails (`bgverification`.`candidate_references`, CONSTRAINT `candidate_references_ibfk_1` FOREIGN KEY (`candidate_id`) REFERENCES `candidate` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+2024-07-13T13:07:30.699Z [localhost] error: Cannot add or update a child row: a foreign key constraint fails (`bgverification`.`candidate_references`, CONSTRAINT `candidate_references_ibfk_1` FOREIGN KEY (`candidate_id`) REFERENCES `candidate` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+2024-07-13T13:07:53.852Z [localhost] error: Cannot add or update a child row: a foreign key constraint fails (`bgverification`.`candidate_references`, CONSTRAINT `candidate_references_ibfk_1` FOREIGN KEY (`candidate_id`) REFERENCES `candidate` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+2024-07-14T07:01:42.168Z [localhost] error: Cannot add or update a child row: a foreign key constraint fails (`bgverification`.`candidate_references`, CONSTRAINT `candidate_references_ibfk_1` FOREIGN KEY (`candidate_id`) REFERENCES `candidate` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+2024-07-14T08:25:23.951Z [localhost] error: Validation error
+2024-07-14T08:27:39.929Z [localhost] error: Validation error
+2024-07-14T08:33:56.985Z [localhost] error: Validation error
+2024-07-14T08:34:34.845Z [localhost] error: Validation error
+2024-07-14T08:34:46.818Z [localhost] error: Validation error
+2024-07-15T13:57:32.044Z [localhost] error: Unknown column 'token' in 'field list'
+2024-07-16T06:55:14.847Z [localhost] error: Validation error
+2024-07-16T07:05:46.583Z [localhost] error: Validation error
+2024-07-16T07:05:49.287Z [localhost] error: Validation error
+2024-07-16T07:05:52.476Z [localhost] error: Validation error
+2024-07-16T07:05:52.688Z [localhost] error: Validation error
+2024-07-16T07:12:09.566Z [localhost] error: Validation error
+2024-07-16T07:12:19.739Z [localhost] error: Validation error
+2024-07-16T07:12:20.945Z [localhost] error: Validation error
+2024-07-16T07:12:26.820Z [localhost] error: Validation error
+2024-07-19T06:55:49.443Z [localhost] error: modalName.findAll is not a function
+2024-07-19T06:57:01.826Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:00:07.701Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:00:09.050Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:00:10.142Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:00:33.262Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:04:25.673Z [localhost] error: Model.findAll is not a function
+2024-07-19T07:04:27.328Z [localhost] error: Model.findAll is not a function
+2024-07-19T07:07:28.167Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:07:29.366Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:07:30.481Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:07:31.439Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:12:26.968Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:12:28.311Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:12:29.356Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:19:09.791Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:19:11.217Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:19:12.370Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:19:47.647Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:25:32.401Z [localhost] error: modalName.findAll is not a function
+2024-07-19T07:28:42.182Z [localhost] error: notNull Violation: User.username cannot be null
+2024-07-26T17:27:54.409Z [localhost] error: this.build(...).save is not a function
+2024-07-26T17:29:11.429Z [localhost] error: this.build(...).save is not a function
+2024-07-26T17:29:13.147Z [localhost] error: this.build(...).save is not a function
+2024-07-26T17:30:10.788Z [localhost] error: this.build(...).save is not a function
+2024-07-26T17:33:53.910Z [localhost] error: this.build(...).save is not a function
+2024-07-26T17:33:55.525Z [localhost] error: this.build(...).save is not a function
+2024-07-26T17:36:31.024Z [localhost] error: this.build(...).save is not a function
+2024-07-26T17:36:50.010Z [localhost] error: this.build(...).save is not a function
+2024-07-26T17:36:51.455Z [localhost] error: this.build(...).save is not a function
+2024-07-26T17:37:15.071Z [localhost] error: this.build(...).save is not a function
+2024-07-26T17:37:16.430Z [localhost] error: this.build(...).save is not a function
+2024-07-26T17:40:05.909Z [localhost] error: this.build(...).save is not a function
