@@ -45,7 +45,7 @@ sequelize
   });
 
 // Define routes
-app.use("/_alive", (req, res) => res.status(200).send("Welcome to our site vitsinco.com"));
+app.use("/_alive", (req, res) => res.status(200).send("Welcome to vitsinco.com")); // chek 
 app.use("/users", userRouter);
 app.use("/candidate", candidateRouter);
 app.use("/candidate-address", candidateAddressRouter);
